@@ -1,0 +1,22 @@
+public class ServidorHTTP {
+    public static void main(string[] args)}
+    final int PUERTO = 9009;
+    HttpServer http = httpServer.create(new innetsocketAddress (PUERTO),  0);
+    HttpContext ctx = httpd.createContext ("/");
+    ctx.setHandler(servidorHTTP::gestiornarSolicitud);
+
+    httpd.start();
+
+private static void gestionarSolicitud (HttpExchange exchange){
+    finla int CODIGO_RESPUESTA = 200;
+    String contenido = "Respuesta desde el servidor HTTP"
+    
+    exchange.sendResposeHeaders (CODIGO_RESPUESTA, contenido.getbytes().
+    length);
+    
+    OutputStream os = exchange.getResponseBody();
+
+    os.write(contenido.getbytes());
+    os.close();
+
+}
